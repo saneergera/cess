@@ -55,12 +55,26 @@
             </div>
         </div>
 
-        <div class="jumbotron">
+        <div class="container">
 
-            <iframe src="https://www.youtube.com/embed/6Z5NG6weU3A" frameborder="0" allowfullscreen></iframe>
+          <div class="row">
+
+            <div class="col-md-6">
+              <iframe src="https://www.youtube.com/embed/r2ahOD8UHBU" frameborder="0" allowfullscreen></iframe>
+
+            </div>
+
+
+            <div class="col-md-6">
+              <div id="fb-root"></div>
+              <div class="fb-page" data-href="https://www.facebook.com/gnducess/" data-tabs="timeline" data-width="560" data-height="315" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/gnducess/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/gnducess/">CESS- Computer Engineering Student Society</a></blockquote></div>
+
+            </div>
+
+          </div>
+
+
+
 
 
         </div>
-
-
-

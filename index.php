@@ -1,3 +1,5 @@
+<?php include("pages/connection.php"); ?>
+
 <html ng-app='cess'>
 
 <head>
@@ -12,15 +14,19 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme|Crete+Round|Luckiest+Guy" href="/css/master.css">
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Varela+Round" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/home.css">
      <link rel="stylesheet" type="text/css" href="css/teams.css">
+     <link rel="stylesheet" type="text/css" href="css/custom1.css">
     <link href="css/animate.css" rel="stylesheet">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.6.5/angular-route.js"></script>
 </head>
 
-<body>
+<body style="background:white">
 
 
 <section class="welcome-screen animated infinite pulse" id="welcome-page" style="margin: 0;
@@ -61,8 +67,24 @@
                 <ul class="nav navbar-nav navbar-right">
                     <a href="#!"><i class="fa fa-home" aria-hidden="true"></i><span id="list">Home</span></a>
                     <a href="#!/home"><i class="fa fa-users" aria-hidden="true"></i><span id="list">Teams</span></a>
-                    <a href="home.php"><i class="fa fa-user" aria-hidden="true"></i><span id="list">Events</span></a>
-                    <a href="home.php"><i class="fa fa-camera" aria-hidden="true"></i><span id="list">Gallery</span></a>
+                    <a href="#!/events"><i class="fa fa-user" aria-hidden="true"></i><span id="list">Events</span></a>
+                    <a href="#!/galary/1"><i class="fa fa-camera" aria-hidden="true"></i><span id="list">Gallery</span></a>
+
+                    <?php
+
+                    if(isset($_SESSION['name']))
+                    {
+                      echo "<a  href='#!/logout'style='  margin-right: 26px;
+                    position: relative;
+                    top: 9px;'>Welcome ".$_SESSION['name']."</a>";
+                    }
+                    else {
+                    echo  '<a href="#!/register"><i class="fa fa-sign-in" aria-hidden="true"></i><span id="list">login</span></a>';
+                    }
+
+
+
+                    ?>
 
                 </ul>
             </div>
@@ -89,14 +111,14 @@
 
   console.log("hello");
 
-   
+
 
 
 
  window.onload = function() {
            // $('#now-playing').addClass('run-animation');
-           
-           
+
+
 
            setTimeout(function(){
                        $('#welcome-page').addClass('animated bounceOutDown');
@@ -105,20 +127,23 @@
 
                       $('#welcome-page').addClass('hidden');
                     },3000);
-             
-             
+
+
             setTimeout(function(){
                         $('.body').removeClass('hidden');
                          $('.body').addClass('animated fadeIn');
-                   
-             },3000);
-             
 
-           }   
+             },3000);
+
+
+           }
+
 
 
   </script>
 <script type="text/javascript" src="js/main.js"></script>
+<style media="screen">
 
+</style>
 </body>
 </html>

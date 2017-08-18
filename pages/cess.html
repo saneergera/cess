@@ -1,0 +1,148 @@
+
+<div ng-controller="eachevent">
+  <div class="container">
+
+
+
+
+      <img ng-src="../staff/pages/{{details.Poster}}" style="width: 100%;max-height: 520px;">
+
+
+
+  </div>
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <h2 style="font-family: 'Varela Round', sans-serif;"><strong>{{details.Name}}</strong></h2>
+
+            <p>
+               <dl>
+               <dt style="font-family: 'Didact Gothic', sans-serif;">Date:</dt>
+                  <span>{{details.Date}}</span><br>
+               <dt style="font-family: 'Didact Gothic', sans-serif;" ng-if = 'details.money'>Entry Fee:</dt>
+                  <span>{{details.money}}</span><br>
+
+
+
+
+
+                     <dt style="font-family: 'Didact Gothic', sans-serif;" ng-if="details.msg">Extra-Info:</dt>
+                        <span style="font-family: 'Didact Gothic', sans-serif;">{{details.msg}}</span><br>
+
+               </dl>
+            </p>
+          </div>
+          <div class="col-md-8">
+            <h2 style="font-family: 'Varela Round', sans-serif;"><strong>Details</strong></h2>
+            <p>
+                {{details.Details}}
+
+
+
+            </p>
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+                <button type="button" class="btn btn-lg btn-default" style="float: right;" ng-if="details.Check1"><a href="#!/nopayment">Register Offline</a></button>
+                <button type="button" class="btn btn-lg btn-default" style="float: right;" ng-if="details.Check2"><a href="#!/payment">Register Online</a></button>
+                <button type="button" class="btn btn-lg btn-default" style="float: right;" ng-if="details.Check3"><a href="#!/nopayment">Register</a></button>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+         </div>
+
+        </div>
+
+
+
+
+      </div> <!-- /container -->
+
+</div>
+
+
+<style media="screen">
+.jumbotron{
+  padding: 0px;
+}
+
+div.row{
+  padding-top: 25px;
+  padding-bottom: 90px;
+
+
+}
+
+h2{
+
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 37px;
+  color:#e55f5f;
+  font-family: 'Josefin Sans';
+
+
+}
+
+dl{
+
+  padding-left: 50px;
+  color: #e55f5f;
+  font-size: 20px;
+  font-family: 'Josefin Sans';
+}
+
+p{
+
+  padding-left: 40px;
+  font-size: 22px;
+  color:#e55f5f;
+  font-family: 'Josefin Sans';
+
+}
+
+
+
+.btn-lg{
+    display: inline-block;
+    margin-top: 40px;
+  margin-left: 40px;
+  border-radius: 13px;
+  border-color: #e55f5f;
+  color:#e55f5f;
+
+
+
+
+
+}
+
+.btn-default:hover{
+  color:#e55f5f;
+}
+
+dt
+{
+display: inline;
+
+
+}
+
+
+
+</style>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->

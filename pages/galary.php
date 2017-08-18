@@ -19,7 +19,7 @@
 
 				echo  	 "
      					 <div class='col-lg-4 col-sm-6'>
-        <div class='thumbnail'><a><img src='".$row['img']."' style='height:250px;width:100%;'></a>
+        <div class='thumbnail'><a><img src='../staff/pages/".$row['img']."' style='height:250px;width:100%;'></a>
 
 		<p>" .$row['disc'] ."</p>
 		<p>".$row['title']."</p>        </div>
@@ -37,12 +37,17 @@
 
 				}
 
+				echo "<div style='position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;'>";
+
 
 				for ($i=1; $i<=$total_pages; $i++) {
-				    echo "<a href='http://localhost/cess/#!/galary/".$i."'>".$i."</a> ";
+				    echo "<a href=#!/galary/".$i.">".$i."</a> ";
 				};
 
-
+echo "</div>";
 
 
 

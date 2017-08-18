@@ -2,11 +2,11 @@
 
 
 
-<div class="main  " ng-controller="mainController" >
-   
+<div class="main  " ng-controller="mainController" ng-cloak>
+
     <div class="ui container">
         <div class="hero">
-            
+
         </div>
 
         <div class="search-bar">
@@ -14,7 +14,7 @@
                       <div class="input-wrapper">
                         <input type="text" class="form-control" placeholder="Search..." ng-model="query">
                       </div>
-                      
+
                     </form>
                   </div>
         <div ng-repeat="restaurant in restaurants | filter:query" class="restaurant col-md-5 col-md-offset-1">
@@ -23,27 +23,35 @@
                       <img ng-src="{{restaurant.image}}" height="100" width="100">
                   </div>
                   <div class="rest-info">
-                      
+
                       <div class="rest-name">
                        <a ng-href="#!/restaurant/{{restaurant.id}}"><strong>{{restaurant.name}}</strong></a>
                       </div>
                       <div>
-                         <strong> {{restaurant.location}}</strong>
+                        <small>Vision:</small>
+                         <strong>{{restaurant.cost}}</strong>
                       </div>
                       <div class="rest-address">
-                          {{restaurant.address}}
+                        <small>Heads:</small><span>{{restaurant.cuisines}}</span>
                       </div>
                   </div>
               </div>
               <div class="rest-extra">
-                  <div class="type">
-                      <div><small>Heads:</small><span>{{restaurant.cuisines}}</span></div>
-                      <div><small>About: </small><span>{{restaurant.cost }}</span></div>
-                      <div><small>Vision:</small><span>{{restaurant.hours}}</span></div>
-                  </div>
-                  
+                <button type="button" class="btn btn-danger">Know More</button>
               </div>
-             
+
           </div>
     </div>
 </div>
+<style media="screen">
+  button{
+width: 100%;
+background-color: #e55f5f!important;
+
+  }
+  .btn-danger {
+    color:  white;
+    background-color:  #e55f5f!important;
+    border-color: #e55f5f!important;
+}
+</style>
